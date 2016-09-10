@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { exampleAction, getMaterialsList } from '../actions/actions'
+import { getMaterialsList, setCurrentMaterial } from '../actions/actions'
 import Select from 'react-select'
 
-import LearnSection from './Materials/LearnSection'
-import RecycleSection from './Materials/RecycleSection'
-import ReuseSection from './Materials/ReuseSection'
-import ReduceSection from './Materials/ReduceSection'
+import MaterialMainPage from './Materials/MaterialMainPage'
+
+import { useRouterHistory } from 'react-router'
+import { createHashHistory } from 'history'
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 class ExampleComponent1 extends Component {
 	constructor(){
@@ -15,34 +16,28 @@ class ExampleComponent1 extends Component {
 			chosenMaterial: ''
 		}
 	}
-	componentWillReceiveProps(nextProps){
-		console.log(nextProps)
-	}
 	chooseMaterial(val){
 		var chosenMaterial = val.value;
 		this.setState({
 			chosenMaterial
 		})
+		localStorage.setItem('chosenMaterial', chosenMaterial)
+		appHistory.push('/materials');
+		// this.props.dispatch(setCurrentMaterial(chosenMaterial))
 	}
 	componentWillMount(){
 		this.props.dispatch(getMaterialsList())
+	}
+	componentWillUpdate(){
+		// if (this.state.chosenMaterial.length > 0){
+		// 	this.props.dispatch(getMaterialsList(this.state.chosenMaterial))
+		// }
 	}
 	render(){
 		var optionsArray = [];
 		this.props.materials.map(function(val, i){
 			optionsArray.push({label: val.name, value: val.name})
 		})
-
-		var learnSection = '',
-			recycleSection = '',
-			reuseSection = '',
-			reduceSection = '';
-		if (this.state.chosenMaterial.length > 0){
-			var learnSection = <LearnSection material={this.state.chosenMaterial} />;
-			var recycleSection = <RecycleSection material={this.state.chosenMaterial} />;
-			var reuseSection = <ReuseSection material={this.state.chosenMaterial} />;
-			var reduceSection = <ReduceSection material={this.state.chosenMaterial} />;
-		}
 		return (
 			<div className='main-page-component'>
 				<div className='main-page-question'>
@@ -57,31 +52,14 @@ class ExampleComponent1 extends Component {
 	                  />
 			        <h1>?</h1>
 				</div>
-				<div className='main-area'>
-					<div className='main-row'>
-						<section>
-				        	{learnSection}
-			        	</section>
-						<section>
-				        	{recycleSection}
-			        	</section>
-					</div>
-		        	<div className='main-row'>
-		        		<section>
-				        	{reuseSection}
-			        	</section>
-			        	<section>
-				        	{reduceSection}
-			        	</section>
-		        	</div>
-	        	</div>
 			</div>
 			)
 	}
 }
 var mapStateToProps = function(state, ownProps){
     return {
-    	materials: state.materialsReducer.materials
+    	materials: state.materialsReducer.materials,
+    	currentMaterial: state.materialsReducer.currentMaterial
     };
 };
 ExampleComponent1 = connect(state => (mapStateToProps), null)(ExampleComponent1);

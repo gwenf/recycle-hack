@@ -8,6 +8,12 @@ import { store, dispatch } from './store/store'
 
 import MainPage from './components/MainPage'
 import PointSystem from './components/PointSystem'
+import MaterialMainPage from './components/Materials/MaterialMainPage'
+
+import LearnSection from './components/Materials/LearnSection'
+import RecycleSection from './components/Materials/RecycleSection'
+import ReuseSection from './components/Materials/ReuseSection'
+import ReduceSection from './components/Materials/ReduceSection'
 
 import 'react-select/dist/react-select.css';
 import './styles/app.sass';
@@ -17,6 +23,11 @@ ReactDOM.render(
 		<Router history={hashHistory}>
 			<Route component={App}>
 				<Route path='/' component={MainPage} />
+				<Route path='/materials' component={MaterialMainPage}/>
+				<Route path='/materials/learn' component={LearnSection} />
+				<Route path='/materials/recycle' component={RecycleSection} />
+				<Route path='/materials/reuse' component={ReuseSection} />
+				<Route path='/materials/reduce' component={ReduceSection} />
 				<Route path='/example' component={PointSystem} />
 			</Route>
 		</Router>

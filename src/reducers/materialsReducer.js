@@ -5,6 +5,11 @@ function materialsReducer(state = '', action){
       	...state,
       	materials: action.materials
       }
+    case 'SET_CURRENT_MATERIAL':
+    	return {
+    		state,
+    		currentMaterial: action.currentMaterial
+    	}
     default:
       return state;
   };

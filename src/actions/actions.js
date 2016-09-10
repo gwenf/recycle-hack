@@ -23,6 +23,13 @@ export const fetchedMaterialsList = (list) => {
   };
 };
 
+export const setCurrentMaterial = (material) => {
+	return {
+		type: 'SET_CURRENT_MATERIAL',
+		currentMaterial: material
+	}
+}
+
 
 export function getMaterialsList(){
  	return (dispatch, getState) => {
@@ -34,77 +41,233 @@ export function getMaterialsList(){
 	 	    {
 	 	    	name: 'paper',
 	 	    	types: [
-	 	    		'Office Paper',
-	 	    		'Magazines',
-	 	    		'Newspaper',
-	 	    		'Phonebooks',
-	 	    		'Paperboard',
-	 	    		'Direct/Junk Mail'
+	 	    		{
+	 	    			type: 'Office Paper',
+	 	    			description: 'Recycle Paper...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Magazines',
+	 	    			description: 'Recycle Paper...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Newspaper',
+	 	    			description: 'Recycle Paper...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Phonebooks',
+	 	    			description: 'Recycle Paper...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Paperboard',
+	 	    			description: 'Recycle Paper...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Direct/Junk Mail',
+	 	    			description: 'Recycle Paper...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    },
 	 	    {
 	 	    	name: 'cardboard',
 	 	    	types: [
-	 	    		'Corrugated Cardboard',
-	 	    		'Cardboard Boxes'
+	 	    		{
+	 	    			type: 'Corrugated Cardboard',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Cardboard Boxes',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    },
 	 	    {
 	 	    	name: 'plastics',
 	 	    	types: [
-	 	    		'Plastic Bottles',
-	 	    		'Grocery Store Bags'
+	 	    		{
+	 	    			type: 'Plastic Bottles',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Grocery Store Bags',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    },
 	 	    {
 	 	    	name: 'aluminun',
 	 	    	types: [
-	 	    		'Aluminun Cans',
-	 	    		'Aluminun Foil'
+	 	    		{
+	 	    			type: 'Aluminun Cans',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Aluminun Foil',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    },
 	 	    {
 	 	    	name: 'steel/tin',
 	 	    	types: [
-	 	    		'Steel Cans',
-	 	    		'Tin Cans'
+	 	    		{
+	 	    			type: 'Steel Cans',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Tin Cans',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    },
 	 	    {
 	 	    	name: 'glass',
 	 	    	types: [
-	 	    		'Glass Bottles',
-	 	    		'Other Glass Containers'
+	 	    		{
+	 	    			type: 'Glass Bottles',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Other Glass Containers',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    },
 	 	    {
 	 	    	name: 'ink cartridges',
 	 	    	types: [
-	 	    		'Printer Cartridges'
+	 	    		{
+	 	    			type: 'Printer Cartridges',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    },
 	 	    {
 	 	    	name: 'batteries',
 	 	    	types: [
-	 	    		'Household Batteries',
-	 	    		'Car Batteries'
+	 	    		{
+	 	    			type: 'Household Batteries',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Car Batteries',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    },
 	 	    {
 	 	    	name: 'oil',
 	 	    	types: [
-	 	    		'Cooking Oil',
-	 	    		'Car Oil'
+	 	    		{
+	 	    			type: 'Cooking Oil',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Car Oil',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    },
 	 	    {
 	 	    	name: 'electronics',
 	 	    	types: [
-	 	    		'Computers',
-	 	    		'Monitors',
-	 	    		'Televisions',
-	 	    		'Microwaves',
-	 	    		'Other Appliances'
+	 	    		{
+	 	    			type: 'Computers',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Monitors',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Televisions',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Microwaves',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		},
+	 	    		{
+	 	    			type: 'Other Appliances',
+	 	    			description: 'Recycle Cardboard...',
+	 	    			tutorial: [
+	 	    				''
+	 	    			]
+	 	    		}
 	 	    	]
 	 	    }
  		]
