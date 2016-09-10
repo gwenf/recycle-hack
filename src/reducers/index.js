@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 import exampleReducer from './exampleReducer'
 import materialsReducer from './materialsReducer'
+import locationReducer from './locationReducer'
 
 const appReducer = combineReducers({
   exampleReducer,
-  materialsReducer
+  materialsReducer,
+	locationReducer
 })
 
 const testApp = (state, action) => {
