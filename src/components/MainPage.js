@@ -13,23 +13,29 @@ class ExampleComponent1 extends Component {
 	componentWillReceiveProps(nextProps){
 		console.log(nextProps)
 	}
-	chooseMaterial(){
-		console.log('changed')
+	chooseMaterial(val){
+		var chosenMaterial = val.value;
+		this.setState({
+			chosenMaterial
+		})
 	}
 	componentWillMount(){
-		console.log('componentWillMount')
 		this.props.dispatch(getMaterialsList())
 	}
 	render(){
+		var optionsArray = [];
+		this.props.materials.map(function(val, i){
+			optionsArray.push({label: val, value: val})
+		})
 		return (
 			<div>
 				<h1 style={{display: 'inline'}}>What do I do with</h1>
 				<Select
                       value={this.state.chosenMaterial}
-                      className="select"
+                      className="materials-select"
                       clearable={false}
-                      options={[{label: 'Q1', value: 'Q1'},{label: 'Q2', value: 'Q2'},{label: 'Q3', value: 'Q3'}]}
-                      searchable={false}
+                      options={optionsArray}
+                      searchable={true}
                       onChange={this.chooseMaterial.bind(this)}
                   />
 		        <h1 style={{display: 'inline'}}>?</h1>

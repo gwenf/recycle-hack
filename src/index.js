@@ -6,8 +6,8 @@ import {Route, Router, IndexRoute, hashHistory} from 'react-router';
 import {Provider} from 'react-redux';
 import { store, dispatch } from './store/store'
 
-import ExampleComponent1 from './components/ExampleComponent1'
-import ExampleComponent2 from './components/ExampleComponent2'
+import MainPage from './components/MainPage'
+import PointSystem from './components/PointSystem'
 
 import 'react-select/dist/react-select.css';
 import './styles/app.sass';
@@ -16,8 +16,8 @@ ReactDOM.render(
 	<Provider store={store}>
 		<Router history={hashHistory}>
 			<Route component={App}>
-				<Route path='/' component={ExampleComponent1} />
-				<Route path='/example' component={ExampleComponent2} />
+				<Route path='/' component={MainPage} />
+				<Route path='/example' component={PointSystem} />
 			</Route>
 		</Router>
 	</Provider>,
