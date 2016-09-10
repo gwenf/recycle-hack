@@ -6,7 +6,7 @@ import locationReducer from './locationReducer'
 const appReducer = combineReducers({
   exampleReducer,
   materialsReducer,
-	locationReducer
+  locationReducer
 })
 
 const testApp = (state, action) => {
