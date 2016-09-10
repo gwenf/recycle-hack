@@ -29,12 +29,12 @@ class LearnSection extends Component {
 	  	})
 	  	console.log(types)
 	  	var materialsArr = types.map(function(val, i){
-	  		return <li key={i}>{val}</li>
+	  		return <button key={i}>{val}</button>
 	  	})
   	// }
     return (
       <div className='sections'>
-        <h1>Learn Section</h1>
+        <h1>Learn How to Recycle {this.state.material.replace(this.state.material[0], this.state.material[0].toUpperCase())}</h1>
         <ul>{materialsArr}</ul>
       </div>
     );

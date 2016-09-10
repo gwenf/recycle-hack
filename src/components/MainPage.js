@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import { getMaterialsList, setCurrentMaterial } from '../actions/actions'
 import Select from 'react-select'
 
-import MaterialMainPage from './Materials/MaterialMainPage'
-
 import { useRouterHistory } from 'react-router'
 import { createHashHistory } from 'history'
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
@@ -14,6 +12,8 @@ import RecycleSection from './Materials/RecycleSection'
 import ReuseSection from './Materials/ReuseSection'
 import ReduceSection from './Materials/ReduceSection'
 import MapSection from './Materials/MapSection'
+
+import Leaderboard from './Leaderboard'
 
 class ExampleComponent1 extends Component {
 	constructor(){
@@ -58,6 +58,7 @@ class ExampleComponent1 extends Component {
 	                  />
 			        <h1>?</h1>
 				</div>
+				<Leaderboard />
 			</div>
 			)
 	}
