@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 class ReduceSection extends Component {
   render() {
     return (
-      <div>
+      <div className='sections'>
         <h1>How Can I Reduce?</h1>
       </div>
     );

@@ -5,9 +5,13 @@ export default class App extends Component {
   render() {
     return (
     	<div>
-	      <h1>Recycle App Logo</h1>
-	      <Link to='/'>Home</Link>
-	      <Link to='/example'>Learn more about earning points.</Link>
+    		<div className='main-top-nav'>
+		      <h1>Recycle App Logo</h1>
+		      <div>
+			      <Link to='/'>Home</Link>
+			      <Link to='/example'>Learn more about earning points</Link>
+		      </div>
+	        </div>
 	      {this.props.children}
 	    </div>
     );

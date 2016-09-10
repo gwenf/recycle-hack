@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 class ReuseSection extends Component {
   render() {
     return (
-      <div>
+      <div className='sections'>
         <h1>How Can I Reuse?</h1>
       </div>
     );

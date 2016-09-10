@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 class RecycleSection extends Component {
   render() {
     return (
-      <div>
+      <div className='sections'>
         <h1>How Can I Recycle?</h1>
       </div>
     );

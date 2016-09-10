@@ -17,7 +17,6 @@ class MaterialMainPage extends Component {
 	// }
 	componentWillMount(){
 		var material = localStorage.getItem('chosenMaterial');
-
 	}
 	render(){
 		return (

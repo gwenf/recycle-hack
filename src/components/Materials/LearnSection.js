@@ -33,8 +33,8 @@ class LearnSection extends Component {
 	  	})
   	// }
     return (
-      <div>
-        <h1>LearnSection:</h1>
+      <div className='sections'>
+        <h1>Learn Section</h1>
         <ul>{materialsArr}</ul>
       </div>
     );
