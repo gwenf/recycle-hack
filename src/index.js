@@ -9,6 +9,9 @@ import { store, dispatch } from './store/store'
 import ExampleComponent1 from './components/ExampleComponent1'
 import ExampleComponent2 from './components/ExampleComponent2'
 
+import 'react-select/dist/react-select.css';
+import './styles/app.sass';
+
 ReactDOM.render(
 	<Provider store={store}>
 		<Router history={hashHistory}>
