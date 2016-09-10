@@ -9,6 +9,7 @@ const initialState = {
 function locationReducer(state = initialState, action){
     switch (action.type) {
         case ACTIONS.LOCATION_UPDATE:
+            console.log('reducer working', action.location);
             return {
                 latitude: action.location.coords.latitude,
                 longitude: action.location.coords.longitude
