@@ -16,6 +16,7 @@ import ReuseSection from './components/Materials/ReuseSection'
 import ReduceSection from './components/Materials/ReduceSection'
 
 import 'react-select/dist/react-select.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './styles/app.sass';
 
 ReactDOM.render(
