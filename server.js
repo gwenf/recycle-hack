@@ -1,5 +1,3 @@
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 3000;
