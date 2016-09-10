@@ -17,7 +17,12 @@ function mapReducer(state = initialState, action){
         case ACTIONS.FETCHED_MAP:
             console.log('reducer working', action);
             return {
-                markers: action.markers,
+                markers: action.markers.map((marker) => {
+                    return {
+                        latitude: marker.geometry.coordinates[1],
+                        longitude: marker.geometry.coordinates[0]
+                    };
+                }),
                 latitude: action.location.coords.latitude,
                 longitude: action.location.coords.longitude
             }
