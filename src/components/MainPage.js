@@ -46,7 +46,7 @@ class ExampleComponent1 extends Component {
 		return (
 			<div className='main-page-component'>
 				<div className='main-page-question'>
-					<h1>What do I do with </h1>
+					<h1>What do I do with</h1>
 					<Select
 	                      value={this.state.chosenMaterial}
 	                      className="materials-select"
@@ -57,12 +57,24 @@ class ExampleComponent1 extends Component {
 	                  />
 			        <h1>?</h1>
 				</div>
-		        <section>
-		        	{learnSection}
-		        	{recycleSection}
-		        	{reuseSection}
-		        	{reduceSection}
-		        </section>
+				<div className='main-area'>
+					<div className='main-row'>
+						<section>
+				        	{learnSection}
+			        	</section>
+						<section>
+				        	{recycleSection}
+			        	</section>
+					</div>
+		        	<div className='main-row'>
+		        		<section>
+				        	{reuseSection}
+			        	</section>
+			        	<section>
+				        	{reduceSection}
+			        	</section>
+		        	</div>
+	        	</div>
 			</div>
 			)
 	}
