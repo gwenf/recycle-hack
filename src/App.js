@@ -6,8 +6,8 @@ export default class App extends Component {
     return (
     	<div>
 	      <h1>Recycle App Logo</h1>
-	      <Link to='/'>Page 1</Link>
-	      <Link to='/example'>Page 2</Link>
+	      <Link to='/'>Home</Link>
+	      <Link to='/example'>Point System</Link>
 	      {this.props.children}
 	    </div>
     );

@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { exampleAction, getMaterialsList } from '../actions/actions'
 import Select from 'react-select'
 
+import LearnSection from './Materials/LearnSection'
+
 class ExampleComponent1 extends Component {
 	constructor(){
 		super();
@@ -25,28 +27,33 @@ class ExampleComponent1 extends Component {
 	render(){
 		var optionsArray = [];
 		this.props.materials.map(function(val, i){
-			optionsArray.push({label: val, value: val})
+			optionsArray.push({label: val.name, value: val.name})
 		})
+
+		var learnSection = this.state.chosenMaterial.length > 0 ? <LearnSection material={this.state.chosenMaterial} /> : '';
 		return (
-			<div>
-				<h1 style={{display: 'inline'}}>What do I do with</h1>
-				<Select
-                      value={this.state.chosenMaterial}
-                      className="materials-select"
-                      clearable={false}
-                      options={optionsArray}
-                      searchable={true}
-                      onChange={this.chooseMaterial.bind(this)}
-                  />
-		        <h1 style={{display: 'inline'}}>?</h1>
-				<button style={{display: 'block'}} onClick={()=>{this.props.dispatch(exampleAction('dummy data here'))}}>Click here for redux test.</button>
+			<div className='main-page-component'>
+				<div className='main-page-question'>
+					<h1>What do I do with </h1>
+					<Select
+	                      value={this.state.chosenMaterial}
+	                      className="materials-select"
+	                      clearable={false}
+	                      options={optionsArray}
+	                      searchable={true}
+	                      onChange={this.chooseMaterial.bind(this)}
+	                  />
+			        <h1>?</h1>
+				</div>
+		        <section>
+		        	{learnSection}
+		        </section>
 			</div>
 			)
 	}
 }
 var mapStateToProps = function(state, ownProps){
     return {
-    	testData: state.exampleReducer.testData,
     	materials: state.materialsReducer.materials
     };
 };

@@ -31,12 +31,82 @@ export function getMaterialsList(){
  	    const state = getState()
 
  	    var list = [
- 			'paper',
- 			'plastic',
- 			'aluminun',
- 			'glass',
- 			'ink cartridges',
- 			'oil'
+	 	    {
+	 	    	name: 'paper',
+	 	    	types: [
+	 	    		'Office Paper',
+	 	    		'Magazines',
+	 	    		'Newspaper',
+	 	    		'Phonebooks',
+	 	    		'Paperboard',
+	 	    		'Direct/Junk Mail'
+	 	    	]
+	 	    },
+	 	    {
+	 	    	name: 'cardboard',
+	 	    	types: [
+	 	    		'Corrugated Cardboard',
+	 	    		'Cardboard Boxes'
+	 	    	]
+	 	    },
+	 	    {
+	 	    	name: 'plastics',
+	 	    	types: [
+	 	    		'Plastic Bottles',
+	 	    		'Grocery Store Bags'
+	 	    	]
+	 	    },
+	 	    {
+	 	    	name: 'aluminun',
+	 	    	types: [
+	 	    		'Aluminun Cans',
+	 	    		'Aluminun Foil'
+	 	    	]
+	 	    },
+	 	    {
+	 	    	name: 'steel/tin',
+	 	    	types: [
+	 	    		'Steel Cans',
+	 	    		'Tin Cans'
+	 	    	]
+	 	    },
+	 	    {
+	 	    	name: 'glass',
+	 	    	types: [
+	 	    		'Glass Bottles',
+	 	    		'Other Glass Containers'
+	 	    	]
+	 	    },
+	 	    {
+	 	    	name: 'ink cartridges',
+	 	    	types: [
+	 	    		'Printer Cartridges'
+	 	    	]
+	 	    },
+	 	    {
+	 	    	name: 'batteries',
+	 	    	types: [
+	 	    		'Household Batteries',
+	 	    		'Car Batteries'
+	 	    	]
+	 	    },
+	 	    {
+	 	    	name: 'oil',
+	 	    	types: [
+	 	    		'Cooking Oil',
+	 	    		'Car Oil'
+	 	    	]
+	 	    },
+	 	    {
+	 	    	name: 'electronics',
+	 	    	types: [
+	 	    		'Computers',
+	 	    		'Monitors',
+	 	    		'Televisions',
+	 	    		'Microwaves',
+	 	    		'Other Appliances'
+	 	    	]
+	 	    }
  		]
 
  		dispatch(fetchedMaterialsList(list));
