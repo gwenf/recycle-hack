@@ -3,14 +3,21 @@ import {ACTIONS} from "../actions/actions"
 /** coords of Lafyette */
 const initialState = {
     latitude: 40.4049599,
-    longitude: -86.9282559
-}
+    longitude: -86.9282559,
+    markers:[
+        {
+            latitude: 40.4049599,
+            longitude: -86.9282559,
+        }]
+    }
 
-function locationReducer(state = initialState, action){
+
+function mapReducer(state = initialState, action){
     switch (action.type) {
-        case ACTIONS.LOCATION_UPDATE:
-            console.log('reducer working', action.location);
+        case ACTIONS.FETCHED_MAP:
+            console.log('reducer working', action);
             return {
+                markers: action.markers,
                 latitude: action.location.coords.latitude,
                 longitude: action.location.coords.longitude
             }
@@ -18,4 +25,5 @@ function locationReducer(state = initialState, action){
             return state;
     };
 };
-export default locationReducer
+
+export default mapReducer

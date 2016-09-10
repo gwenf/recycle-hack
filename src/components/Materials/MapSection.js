@@ -1,10 +1,25 @@
-import * as React from "react";
-import {connect} from "react-redux";
+import React from 'react'
+import { connect } from 'react-redux'
+import { MapComponent } from '../MapComponent'
+import * as LocationService from '../../services/locationService'
+import * as MarkersService from '../../services/markersService'
+import * as Store from '../../store/store'
+import { initMap } from '../../actions/actions'
 import {GoogleMapLoader, GoogleMap, Marker} from "react-google-maps";
 
-class MapComponent extends React.Component {
+class MapSection extends React.Component {
     componentWillReceiveProps(nextProps) {
         console.log(nextProps)
+    }
+
+    componentWillMount() {
+        LocationService.getCurrentLocation().then(function (location) {
+            MarkersService.getMarkers().then(function (markers) {
+                Store.dispatch(initMap(location, markers))
+            })
+        }).catch(() => {
+
+        });
     }
 
     render() {
@@ -39,13 +54,18 @@ class MapComponent extends React.Component {
                     }
                 />
             </div>
-        )
+        );
     }
 }
+
 var mapStateToProps = function (state, ownProps) {
-    return {};
+    return {
+        latitude: state.mapReducer.latitude,
+        longitude: state.mapReducer.longitude,
+        markers: state.mapReducer.markers
+    };
 };
 
-MapComponent = connect(state => (mapStateToProps), null)(MapComponent);
+MapSection = connect(state => (mapStateToProps), null)(MapSection);
 
-export default MapComponent
+export default MapSection

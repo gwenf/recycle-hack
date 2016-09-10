@@ -7,6 +7,7 @@ import LearnSection from './Materials/LearnSection'
 import RecycleSection from './Materials/RecycleSection'
 import ReuseSection from './Materials/ReuseSection'
 import ReduceSection from './Materials/ReduceSection'
+import MapSection from './Materials/MapSection'
 
 class ExampleComponent1 extends Component {
 	constructor(){
@@ -36,12 +37,14 @@ class ExampleComponent1 extends Component {
 		var learnSection = '',
 			recycleSection = '',
 			reuseSection = '',
-			reduceSection = '';
+			reduceSection = '',
+			mapSection = '';
 		if (this.state.chosenMaterial.length > 0){
 			var learnSection = <LearnSection material={this.state.chosenMaterial} />;
 			var recycleSection = <RecycleSection material={this.state.chosenMaterial} />;
 			var reuseSection = <ReuseSection material={this.state.chosenMaterial} />;
 			var reduceSection = <ReduceSection material={this.state.chosenMaterial} />;
+			var mapSection = <MapSection/>;
 		}
 		return (
 			<div className='main-page-component'>
@@ -75,6 +78,7 @@ class ExampleComponent1 extends Component {
 			        	</section>
 		        	</div>
 	        	</div>
+				{mapSection}
 			</div>
 			)
 	}

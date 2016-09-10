@@ -1,19 +1,20 @@
-export const exampleAction = (testData) => {
-  return {
-    type: 'TESTING_DATA',
-    testData
-  };
+export const initMap = (location, markers) => {
+	return (dispatch, getState) => {
+		const state = getState();
+		dispatch(fetchedMarkers(location, markers));
+	};
 };
 
-export const updateCurrentLocationAction = (location) =>{
-  return{
-    type: ACTIONS.LOCATION_UPDATE,
-    location
-  };
+export const fetchedMarkers = (location, markers) => {
+	return{
+		type: ACTIONS.FETCHED_MAP,
+		markers: markers,
+		location: location
+	};
 };
 
 export const ACTIONS = {
-  LOCATION_UPDATE : "LOCATION_UPDATE",
+	FETCHED_MAP : "FETCHED_MAP",
 };
 
 export const fetchedMaterialsList = (list) => {

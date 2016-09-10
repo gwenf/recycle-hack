@@ -1,5 +1,5 @@
 export function getCurrentLocation(){
-    new Promise(function(resolve, reject) {
+    return new Promise(function(resolve, reject) {
 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(resolve);
