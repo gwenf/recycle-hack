@@ -9,7 +9,7 @@ class ExampleComponent1 extends Component {
 	render(){
 		return (
 			<div>
-				<h1>Hello from ExampleComponent1.</h1>
+				<h1>Small Change to Test Pushing.</h1>
 				<button onClick={()=>{this.props.dispatch(exampleAction('dummy data here'))}}>Click here for redux test.</button>
 			</div>
 			)
