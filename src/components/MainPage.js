@@ -4,6 +4,9 @@ import { exampleAction, getMaterialsList } from '../actions/actions'
 import Select from 'react-select'
 
 import LearnSection from './Materials/LearnSection'
+import RecycleSection from './Materials/RecycleSection'
+import ReuseSection from './Materials/ReuseSection'
+import ReduceSection from './Materials/ReduceSection'
 
 class ExampleComponent1 extends Component {
 	constructor(){
@@ -30,7 +33,16 @@ class ExampleComponent1 extends Component {
 			optionsArray.push({label: val.name, value: val.name})
 		})
 
-		var learnSection = this.state.chosenMaterial.length > 0 ? <LearnSection material={this.state.chosenMaterial} /> : '';
+		var learnSection = '',
+			recycleSection = '',
+			reuseSection = '',
+			reduceSection = '';
+		if (this.state.chosenMaterial.length > 0){
+			var learnSection = <LearnSection material={this.state.chosenMaterial} />;
+			var recycleSection = <RecycleSection material={this.state.chosenMaterial} />;
+			var reuseSection = <ReuseSection material={this.state.chosenMaterial} />;
+			var reduceSection = <ReduceSection material={this.state.chosenMaterial} />;
+		}
 		return (
 			<div className='main-page-component'>
 				<div className='main-page-question'>
@@ -47,6 +59,9 @@ class ExampleComponent1 extends Component {
 				</div>
 		        <section>
 		        	{learnSection}
+		        	{recycleSection}
+		        	{reuseSection}
+		        	{reduceSection}
 		        </section>
 			</div>
 			)
