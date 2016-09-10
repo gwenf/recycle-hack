@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import exampleReducer from './exampleReducer'
+import materialsReducer from './materialsReducer'
 
 const appReducer = combineReducers({
-  exampleReducer
+  exampleReducer,
+  materialsReducer
 })
 
 const testApp = (state, action) => {
