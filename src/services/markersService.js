@@ -1,0 +1,91 @@
+export function getMarkers(){
+    return new Promise(function(resolve, reject) {
+
+        const markers = [
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "Mixed Recycling Dropoff Points at Purdue"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -86.91712260246275,
+                            40.42596045563266
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "marker-color": "#7e7e7e",
+                        "marker-size": "medium",
+                        "marker-symbol": "",
+                        "description": "PRF parking lot at Fourth and Russell streets"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -86.91942662000656,
+                            40.42897819352587
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "marker-color": "#7e7e7e",
+                        "marker-size": "medium",
+                        "marker-symbol": "",
+                        "description": "Water tower parking lot"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -86.92495197057724,
+                            40.43360050105178
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "marker-color": "#7e7e7e",
+                        "marker-size": "medium",
+                        "marker-symbol": "",
+                        "description": "Intersection of David Ross Road and Tower Drive"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -86.92703604698181,
+                            40.43344942358462
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "marker-color": "#7e7e7e",
+                        "marker-size": "medium",
+                        "marker-symbol": "",
+                        "description": "Purdue parking lot across from the Armory"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -86.91621869802475,
+                            40.42882914740398
+                        ]
+                    }
+                }
+            ];
+
+        if (markers.length > 0) {
+            resolve(markers);
+        }
+        else {
+            reject(Error("Browser doesn't support location service"));
+        }
+    });
+}
