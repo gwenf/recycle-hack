@@ -52,7 +52,7 @@ class Leaderboard extends Component {
       <div className='container' id='app'>
         <div className='container'>
           <header>
-            <h1>AmEco Leaderboard</h1>
+            <h1>amEco Leaderboard</h1>
           </header>
           <Options value={this.state.data_source}
             options={this.state.sort_options}
