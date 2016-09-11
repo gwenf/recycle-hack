@@ -2,10 +2,22 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class RecycleSection extends Component {
+  constructor(){
+    super();
+    this.state = {
+      material: ''
+    }
+  }
+  componentWillMount(){
+    var material = localStorage.getItem('chosenMaterial');
+    this.setState({
+      material
+    })
+  }
   render() {
     return (
       <div className='sections'>
-        <h1>How Can I Recycle?</h1>
+        <h1>Recycle {this.state.material.replace(this.state.material[0], this.state.material[0].toUpperCase())}</h1>
       </div>
     );
   }
