@@ -8,7 +8,8 @@ export function getMarkers(){
                         "color": "#7e7e7e",
                         "marker-size": "medium",
                         "marker-symbol": "",
-                        "description": "Mixed Recycling Dropoff Points at Purdue"
+                        "description": "Mixed Recycling Dropoff Points at Purdue",
+                        "type": "aluminum"
                     },
                     "geometry": {
                         "type": "Point",
@@ -24,7 +25,8 @@ export function getMarkers(){
                         "color": "#7e7e7e",
                         "marker-size": "medium",
                         "marker-symbol": "",
-                        "description": "PRF parking lot at Fourth and Russell streets"
+                        "description": "PRF parking lot at Fourth and Russell streets",
+                        "type": "pet"
                     },
                     "geometry": {
                         "type": "Point",
@@ -40,7 +42,8 @@ export function getMarkers(){
                         "color": "#7e7e7e",
                         "marker-size": "medium",
                         "marker-symbol": "",
-                        "description": "Water tower parking lot"
+                        "description": "Water tower parking lot",
+                        "type": "paper"
                     },
                     "geometry": {
                         "type": "Point",
@@ -56,7 +59,8 @@ export function getMarkers(){
                         "color": "#7e7e7e",
                         "marker-size": "medium",
                         "marker-symbol": "",
-                        "description": "Intersection of David Ross Road and Tower Drive"
+                        "description": "Intersection of David Ross Road and Tower Drive",
+                        "type": "aluminum"
                     },
                     "geometry": {
                         "type": "Point",
@@ -72,7 +76,8 @@ export function getMarkers(){
                         "color": "#7e7e7e",
                         "marker-size": "medium",
                         "marker-symbol": "",
-                        "description": "Purdue parking lot across from the Armory"
+                        "description": "Purdue parking lot across from the Armory",
+                        "type": "pet"
                     },
                     "geometry": {
                         "type": "Point",

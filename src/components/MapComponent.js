@@ -23,8 +23,14 @@ class MapComponent extends React.Component {
 
     render() {
         var icons = {
-            ameco: {
-                url: 'images/ameco-logo.png'
+            aluminum: {
+                url: 'images/map-bunny.png'
+            },
+            pet: {
+                url: 'images/map-fox.png'
+            },
+            paper: {
+                url: 'images/map-pastry.png'
             }
         };
 
@@ -52,7 +58,7 @@ class MapComponent extends React.Component {
                                         <Marker
                                             position={new google.maps.LatLng(marker.latitude, marker.longitude)}
                                             onRightclick={(event) => console.log(event)}
-                                            icon={icons.ameco}
+                                            icon={icons[marker.type]}
                                         />
                                     )
                                 })
