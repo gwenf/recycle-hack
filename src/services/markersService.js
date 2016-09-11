@@ -5,6 +5,9 @@ export function getMarkers(){
                 {
                     "type": "Feature",
                     "properties": {
+                        "color": "#7e7e7e",
+                        "marker-size": "medium",
+                        "marker-symbol": "",
                         "description": "Mixed Recycling Dropoff Points at Purdue"
                     },
                     "geometry": {
@@ -18,7 +21,7 @@ export function getMarkers(){
                 {
                     "type": "Feature",
                     "properties": {
-                        "marker-color": "#7e7e7e",
+                        "color": "#7e7e7e",
                         "marker-size": "medium",
                         "marker-symbol": "",
                         "description": "PRF parking lot at Fourth and Russell streets"
@@ -34,7 +37,7 @@ export function getMarkers(){
                 {
                     "type": "Feature",
                     "properties": {
-                        "marker-color": "#7e7e7e",
+                        "color": "#7e7e7e",
                         "marker-size": "medium",
                         "marker-symbol": "",
                         "description": "Water tower parking lot"
@@ -50,7 +53,7 @@ export function getMarkers(){
                 {
                     "type": "Feature",
                     "properties": {
-                        "marker-color": "#7e7e7e",
+                        "color": "#7e7e7e",
                         "marker-size": "medium",
                         "marker-symbol": "",
                         "description": "Intersection of David Ross Road and Tower Drive"
@@ -66,7 +69,7 @@ export function getMarkers(){
                 {
                     "type": "Feature",
                     "properties": {
-                        "marker-color": "#7e7e7e",
+                        "color": "#7e7e7e",
                         "marker-size": "medium",
                         "marker-symbol": "",
                         "description": "Purdue parking lot across from the Armory"

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import MapComponent from '../MapComponent.js'
 
 class RecycleSection extends Component {
   constructor(){
@@ -18,6 +19,7 @@ class RecycleSection extends Component {
     return (
       <div className='sections'>
         <h1>Recycle {this.state.material.replace(this.state.material[0], this.state.material[0].toUpperCase())}</h1>
+        <MapComponent />
       </div>
     );
   }
