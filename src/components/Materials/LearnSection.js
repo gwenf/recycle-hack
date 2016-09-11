@@ -1,41 +1,61 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import IndividualMaterial from './IndividualMaterial'
+
 class LearnSection extends Component {
   constructor(){
     super();
     this.state = {
-      material: ''
+      material: '',
+      description: '',
+      typesArray: [],
+      showDescription: false
     }
+  }
+  handleTypeChoice(e){
+    console.log(e.target.id.replace('-', ' '))
+    var type = e.target.id.replace('-', ' ');
+    var typeObj = this.state.typesArray.filter(function(val){
+      return val.type === type;
+    })
+    console.log(typeObj)
+    this.setState({
+      description: typeObj,
+      showDescription: true
+    })
   }
   componentWillMount(){
     var material = localStorage.getItem('chosenMaterial');
+    var typesArray = [];
+    this.props.materials.filter(function(val){
+      if (val.name === material){
+        typesArray = val.types.map(function(x){
+          return x;
+        })
+      }
+    })
     this.setState({
-      material
+      material,
+      typesArray
     })
   }
-  render() {
+  render(){
   	var that = this;
-  	var types = [];
-  	var materialsArr = '';
-  	// if (this.props.material.length > 0){
-  		var material = this.props.materials.filter(function(val){
-  			if (val.name === that.state.material){
-  				val.types.map(function(x){
-  					types.push(x.type)
-  				})
-  			}
-	  		return val.name === that.props.material
-	  	})
-	  	console.log(types)
-	  	var materialsArr = types.map(function(val, i){
-	  		return <button key={i}>{val}</button>
-	  	})
-  	// }
+  	var materialsJSX = this.state.typesArray.map(function(val, i){
+      var id = val.type.replace(' ', '-');
+  		return <button id={id} onClick={that.handleTypeChoice.bind(that)} key={i}>{val.type}</button>
+  	})
+    var display = '';
+    if (this.state.showDescription){
+      display = <IndividualMaterial description={this.state.description} />;
+    } else {
+      display = materialsJSX;
+    }
     return (
       <div className='sections'>
         <h1>Learn How to Recycle {this.state.material.replace(this.state.material[0], this.state.material[0].toUpperCase())}</h1>
-        <ul>{materialsArr}</ul>
+        <ul>{display}</ul>
       </div>
     );
   }
