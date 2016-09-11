@@ -12,29 +12,40 @@ import { createHashHistory } from 'history'
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 class MaterialMainPage extends Component {
-	// componentWillMount(){
-	// 	this.props.dispatch(getMaterialsList())
-	// }
+	constructor(){
+		super();
+		this.state = {
+			material: ''
+		}
+	}
 	componentWillMount(){
 		var material = localStorage.getItem('chosenMaterial');
+		this.setState({
+			material
+		})
 	}
 	render(){
 		return (
 				<div className='main-area'>
+					<h1>{this.state.material.replace(this.state.material[0], this.state.material[0].toUpperCase())}</h1>
 					<div className='main-row'>
-						<section>
-				        	<h1 onClick={()=>{appHistory.push('/materials/learn')}}>Learn Section</h1>
+						<section onClick={()=>{appHistory.push('/materials/learn')}}>
+				        	<h1>Learn Section</h1>
+				        	<p>Educational Material and Tutorials</p>
 			        	</section>
-						<section>
-				        	<h1 onClick={()=>{appHistory.push('/materials/recycle')}}>Recycle Section</h1>
+						<section onClick={()=>{appHistory.push('/materials/recycle')}}>
+				        	<h1>Recycle Section</h1>
+				        	<p>See Recycling Locations and Information</p>
 			        	</section>
 					</div>
 		        	<div className='main-row'>
-		        		<section>
-				        	<h1 onClick={()=>{appHistory.push('/materials/reuse')}}>Reuse Section</h1>
+		        		<section onClick={()=>{appHistory.push('/materials/reuse')}}>
+				        	<h1>Reuse Section</h1>
+				        	<p>Ideas and Examples of how to Reuse Otherwise Disposable Materials</p>
 			        	</section>
-			        	<section>
-				        	<h1 onClick={()=>{appHistory.push('/materials/reduce')}}>Reduce Section</h1>
+			        	<section onClick={()=>{appHistory.push('/materials/reduce')}}>
+				        	<h1>Reduce Section</h1>
+				        	<p>Information on how to Reduce Dependency on Disposable Materials</p>
 			        	</section>
 		        	</div>
 	        	</div>
