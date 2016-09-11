@@ -8,12 +8,15 @@ export default class App extends Component {
     		<div className='main-top-nav'>
 		      <h1>Recycle App Logo</h1>
 		      <div>
-			      <Link to='/'>Home</Link>
-			      <Link to='/example'>Learn more about earning points</Link>
+			    <Link to='/'>Home</Link>
+			    <Link to='/example'>Learn more about earning points</Link>
 		      </div>
 	        </div>
-	      {this.props.children}
+	        {this.props.children}
 	    </div>
     );
   }
 }
+
+
+// <img src='images/Ameca2-01.svg'/>
