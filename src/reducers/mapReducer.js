@@ -20,7 +20,9 @@ function mapReducer(state = initialState, action){
                 markers: action.markers.map((marker) => {
                     return {
                         latitude: marker.geometry.coordinates[1],
-                        longitude: marker.geometry.coordinates[0]
+                        longitude: marker.geometry.coordinates[0],
+                        properties: marker.properties.description,
+                        color: marker.properties.color
                     };
                 }),
                 latitude: action.location.coords.latitude,
