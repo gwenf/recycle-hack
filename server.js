@@ -5,9 +5,11 @@ const Server = {
   app: function () {
     const app = express()
     const indexPath = path.join(__dirname, './index.html')
-    const publicPath = express.static(path.join(__dirname, './dist'))
+    /*const publicPath = express.static(path.join(__dirname, './'))
 
-    app.use('/dist', publicPath)
+    app.use('/', publicPath)*/
+  
+    app.use(express.static(path.join(__dirname, 'dist')));
     app.get('/', function (_, res) { res.sendFile(indexPath) })
 
     return app
@@ -26,10 +28,7 @@ if (process.env.NODE_ENV !== 'production') {
   const compiler = webpack(config)
 
   app.use(webpackHotMiddleware(compiler))
-  app.use(webpackDevMiddleware(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath
-  }))
+  app.use(webpackDevMiddleware(compiler))
 }
 
 app.listen(port)

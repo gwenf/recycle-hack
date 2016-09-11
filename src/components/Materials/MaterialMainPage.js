@@ -23,18 +23,18 @@ class MaterialMainPage extends Component {
 				<div className='main-area'>
 					<div className='main-row'>
 						<section>
-				        	<h1 onClick={()=>{appHistory.push('/materials/learn')}}>Learn Section:</h1>
+				        	<h1 onClick={()=>{appHistory.push('/materials/learn')}}>Learn Section</h1>
 			        	</section>
 						<section>
-				        	<h1 onClick={()=>{appHistory.push('/materials/recycle')}}>Recycle Section:</h1>
+				        	<h1 onClick={()=>{appHistory.push('/materials/recycle')}}>Recycle Section</h1>
 			        	</section>
 					</div>
 		        	<div className='main-row'>
 		        		<section>
-				        	<h1 onClick={()=>{appHistory.push('/materials/reuse')}}>Reuse Section:</h1>
+				        	<h1 onClick={()=>{appHistory.push('/materials/reuse')}}>Reuse Section</h1>
 			        	</section>
 			        	<section>
-				        	<h1 onClick={()=>{appHistory.push('/materials/reduce')}}>Reduce Section:</h1>
+				        	<h1 onClick={()=>{appHistory.push('/materials/reduce')}}>Reduce Section</h1>
 			        	</section>
 		        	</div>
 	        	</div>
