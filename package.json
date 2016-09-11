@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Recycling App",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js --progress --colors",
+    "build": "webpack --config ./webpack.prod.config.js --progress --colors",
     "start": "node server.js",
     "lint": "eslint src"
   },

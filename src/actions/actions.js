@@ -110,14 +110,14 @@ export function getMaterialsList(){
 	 	    	types: [
 	 	    		{
 	 	    			type: 'Plastic Bottles',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle plastics...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Grocery Store Bags',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle plastics...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
@@ -129,14 +129,14 @@ export function getMaterialsList(){
 	 	    	types: [
 	 	    		{
 	 	    			type: 'Aluminun Cans',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle aluminun...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Aluminun Foil',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle aluminun...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
@@ -148,14 +148,14 @@ export function getMaterialsList(){
 	 	    	types: [
 	 	    		{
 	 	    			type: 'Steel Cans',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle steel cans...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Tin Cans',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle tin cans...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
@@ -167,14 +167,14 @@ export function getMaterialsList(){
 	 	    	types: [
 	 	    		{
 	 	    			type: 'Glass Bottles',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle glass...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Other Glass Containers',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle glass...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
@@ -186,7 +186,7 @@ export function getMaterialsList(){
 	 	    	types: [
 	 	    		{
 	 	    			type: 'Printer Cartridges',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle ink cartridges...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
@@ -198,14 +198,14 @@ export function getMaterialsList(){
 	 	    	types: [
 	 	    		{
 	 	    			type: 'Household Batteries',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle batteries...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Car Batteries',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle batteries...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
@@ -217,14 +217,14 @@ export function getMaterialsList(){
 	 	    	types: [
 	 	    		{
 	 	    			type: 'Cooking Oil',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle oil...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Car Oil',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle oil...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
@@ -236,35 +236,35 @@ export function getMaterialsList(){
 	 	    	types: [
 	 	    		{
 	 	    			type: 'Computers',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle Computers...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Monitors',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle Monitors...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Televisions',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle Televisions...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Microwaves',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle Microwaves...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
 	 	    		},
 	 	    		{
 	 	    			type: 'Other Appliances',
-	 	    			description: 'Recycle Cardboard...',
+	 	    			description: 'Recycle Appliances...',
 	 	    			tutorial: [
 	 	    				''
 	 	    			]
