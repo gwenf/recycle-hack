@@ -9,11 +9,11 @@ class IndividualMaterial extends Component {
     }
   }
   render() {
-    console.log(this.props.description.description)
+    var description = this.props.description[0].description;
     return (
       <div className='sections'>
-        <h1>Learn How to Recycle</h1>
-        <p>{this.props.description.description}</p>
+        <p>{description}</p>
+        <button onClick={this.props.toggleDescription}>Back to List</button>
       </div>
     );
   }

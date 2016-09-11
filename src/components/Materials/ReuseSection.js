@@ -18,6 +18,9 @@ class ReuseSection extends Component {
     return (
       <div className='sections'>
         <h1>Ideas for Reusing {this.state.material.replace(this.state.material[0], this.state.material[0].toUpperCase())}</h1>
+        <ul>
+          <li>List of ways to reuse {this.state.material}...</li>
+        </ul>
       </div>
     );
   }

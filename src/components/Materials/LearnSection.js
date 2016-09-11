@@ -19,10 +19,15 @@ class LearnSection extends Component {
     var typeObj = this.state.typesArray.filter(function(val){
       return val.type === type;
     })
-    console.log(typeObj)
+    console.log(typeObj.description)
     this.setState({
       description: typeObj,
       showDescription: true
+    })
+  }
+  toggleDescription(){
+    this.setState({
+      showDescription: !this.state.showDescription
     })
   }
   componentWillMount(){
@@ -48,7 +53,7 @@ class LearnSection extends Component {
   	})
     var display = '';
     if (this.state.showDescription){
-      display = <IndividualMaterial description={this.state.description} />;
+      display = <IndividualMaterial toggleDescription={this.toggleDescription.bind(this)} description={this.state.description} />;
     } else {
       display = materialsJSX;
     }
