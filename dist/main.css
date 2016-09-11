@@ -6,10 +6,19 @@
   *:before, *:after {
     box-sizing: border-box; }
 
-article, aside, figcaption, figure, footer, header, main, nav, section {
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
   display: block; }
 
-html, body {
+html,
+body {
   height: 100%; }
 
 html {
@@ -33,7 +42,10 @@ strong {
 small {
   font-size: 80%; }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-size: inherit;
   color: inherit;
   font-smoothing: antialiased; }
@@ -44,7 +56,8 @@ button {
 input[type="button"], input[type="reset"], input[type="submit"] {
   cursor: pointer; }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   padding: 0;
   border: 0; }
 
@@ -59,7 +72,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-th, td {
+th,
+td {
   padding: 0; }
 
 .main-top-nav {
@@ -73,48 +87,52 @@ th, td {
     color: #333;
     font-size: 20px;
     padding-right: 30px;
-    transition: all .5s ease; }
+    transition: 0.5s all ease; }
     .main-top-nav a:hover {
       text-decoration: underline; }
 
 .main-page-component {
   position: relative;
   top: 80px;
-  margin: 0 auto; }
+  margin: 0px auto; }
   .main-page-component .main-page-question {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
     .main-page-component .main-page-question .materials-select {
       width: 250px;
-      margin-left: 12px;
-      margin-right: 4px; }
+      margin-right: 4px;
+      margin-left: 12px; }
 
 .main-area {
   margin-top: 30px; }
   .main-area .main-row {
     display: flex;
     justify-content: space-around; }
+  .main-area > h1 {
+    text-align: center; }
   .main-area section {
+    border: 1px solid #DDD;
+    border-radius: 15px;
     margin: 30px;
     padding: 2px 8px;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    cursor: pointer; }
+    cursor: pointer;
+    width: 40%; }
 
 .sections {
   width: 50%;
-  margin: 50px auto 0;
+  margin: 50px auto 0%;
   text-align: center; }
   .sections h1 {
     margin-bottom: 20px; }
   .sections button {
     display: block;
+    background: #3FFF3F;
+    border-radius: 10px;
     margin: 20px auto;
-    text-align: center;
     padding: 5px 10px;
     font-size: 20px;
-    border-radius: 10px;
-    background: #3fff3f; }
+    text-align: center; }
 
 .container {
   width: 80%;
@@ -135,19 +153,24 @@ table.results {
   margin: auto;
   width: 100%; }
   table.results a {
-    color: #0099AA; }
+    color: #09A; }
     table.results a:hover {
       color: #00c7dd; }
   table.results td {
     border-bottom: 1px solid #DDD; }
-    table.results td img, table.results td a {
+    table.results td a,
+    table.results td img {
       display: inline-block;
       vertical-align: middle; }
   table.results thead tr {
-    background-color: #0099AA;
+    background-color: #09A;
     color: #FFF; }
-  table.results th, table.results td {
+  table.results th,
+  table.results td {
     padding: 5px; }
 
 .actions {
   margin: 10px 5px; }
+
+.point-system {
+  margin: 80px; }
