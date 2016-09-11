@@ -11,15 +11,15 @@ var path = require('path');
 
 app = express();
 
-app.configure(function(){
-    app.use(express.bodyParser());
-    app.use(express.static(path.join(__dirname, 'dist')));
 
-  app.use(webpackHotMiddleware(compiler))
-  app.use(webpackDevMiddleware(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath
-  }))
+app.use(express.static(__dirname));
+app.use(express.bodyParser());
+app.use(express.static(path.join(__dirname, 'dist')));
+
+app.use(webpackHotMiddleware(compiler))
+
+app.get('*', function (req, res) {
+        res.redirect('index.html');
 });
 
 var port = process.env.PORT || 3000;
