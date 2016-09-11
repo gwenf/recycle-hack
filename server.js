@@ -10,7 +10,7 @@ const Server = {
     app.use('/', publicPath)*/
   
     app.use(express.static(path.join(__dirname, 'dist')));
-    app.get('/', function (_, res) { res.sendFile(indexPath) })
+   // app.get('/', function (_, res) { res.sendFile(indexPath) })
 
     return app
   }
