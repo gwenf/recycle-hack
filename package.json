@@ -1,15 +1,14 @@
 {
   "name": "react-redux-boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for React with Redux",
+  "description": "Recycling App",
   "scripts": {
-    "postinstall": "webpack --config ./webpack.config.js --progress --colors",
     "start": "node server.js",
     "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gwenf/react-redux-boilerplate"
+    "url": "https://github.com/gwenf/recycle-hack"
   },
   "license": "MIT",
   "devDependencies": {

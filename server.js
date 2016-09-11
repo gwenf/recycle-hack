@@ -7,13 +7,12 @@ const Server = {
     const indexPath = path.join(__dirname, './index.html')
     const publicPath = express.static(path.join(__dirname, './dist'))
 
-    app.use('/dist', publicPath)
+    app.use(publicPath)
     app.get('/', function (_, res) { res.sendFile(indexPath) })
 
     return app
   }
 }
-
 
 const port = (process.env.PORT || 3000)
 const app = Server.app()
