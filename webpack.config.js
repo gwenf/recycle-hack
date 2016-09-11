@@ -10,9 +10,10 @@ module.exports = {
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    filename: "./dist/bundle.js"
+    /*path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/dist/'
+    publicPath: '/dist/'*/
   },
 
   plugins: [
