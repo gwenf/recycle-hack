@@ -40,9 +40,11 @@ class ExampleComponent1 extends Component {
 	}
 	render(){
 		var optionsArray = [];
-		this.props.materials.map(function(val, i){
-			optionsArray.push({label: val.name, value: val.name})
-		})
+		if (this.props.materials){
+			this.props.materials.map(function(val, i){
+				optionsArray.push({label: val.name, value: val.name})
+			})
+		}
 		return (
 			<div className='main-page-component'>
 				<div className='main-page-question'>

@@ -8,10 +8,6 @@
     "lint": "eslint src",
     "cleancopy": "node cleancopy.js"
   },
-  "pre-commit": [
-    "cleancopy",
-    "build"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/gwenf/recycle-hack"
