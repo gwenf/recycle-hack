@@ -18,5 +18,4 @@ export default class App extends Component {
   }
 }
 
-
 // <img src='images/Ameca2-01.svg'/>
