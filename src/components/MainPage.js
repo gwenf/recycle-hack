@@ -7,11 +7,6 @@ import { useRouterHistory } from 'react-router'
 import { createHashHistory } from 'history'
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
-import LearnSection from './Materials/LearnSection'
-import RecycleSection from './Materials/RecycleSection'
-import ReuseSection from './Materials/ReuseSection'
-import ReduceSection from './Materials/ReduceSection'
-import MapSection from './Materials/MapSection'
 
 import Leaderboard from './Leaderboard'
 

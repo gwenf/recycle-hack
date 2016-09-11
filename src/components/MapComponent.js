@@ -22,13 +22,10 @@ class MapComponent extends React.Component {
     }
 
     render() {
-        var goldStar = {
-            path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-            fillColor: 'yellow',
-            fillOpacity: 0.8,
-            scale: 1,
-            strokeColor: 'gold',
-            strokeWeight: 2
+        var icons = {
+            ameco: {
+                url: 'images/ameco-logo.png'
+            }
         };
 
         return (
@@ -55,7 +52,7 @@ class MapComponent extends React.Component {
                                         <Marker
                                             position={new google.maps.LatLng(marker.latitude, marker.longitude)}
                                             onRightclick={(event) => console.log(event)}
-                                            icon={goldStar}
+                                            icon={icons.ameco}
                                         />
                                     )
                                 })
