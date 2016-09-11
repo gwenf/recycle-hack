@@ -5,10 +5,10 @@ const Server = {
   app: function () {
     const app = express()
     const indexPath = path.join(__dirname, './index.html')
-    const publicPath = express.static(path.join(__dirname, './dist'))
+    const publicPath = express.static(path.join(__dirname, './'))
 
-    app.use( express.static(path.join(__dirname, './dist')))
-   // app.get('/', function (_, res) { res.sendFile(indexPath) })
+    app.use( express.static(path.join(__dirname, './')))
+    app.get('/', function (_, res) { res.sendFile(indexPath) })
 
     return app
   }
