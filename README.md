@@ -1,9 +1,4 @@
 ## Recycle App
 
-1. `npm install`
-1. `npm start`
-1. Navigate to [localhost:3000](http://localhost:3000/) in your browser.
-
-To do list:
-
-* 
+New Repo Location: [https://github.com/playameco/playameco.github.io](https://github.com/playameco/playameco.github.io)
+Demo of Site: [http://playame.co](http://playame.co)
